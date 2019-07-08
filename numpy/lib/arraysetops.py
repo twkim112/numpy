@@ -304,10 +304,11 @@ def _unique1d(ar, return_index=False, return_inverse=False,
     optional_indices = return_index or return_inverse
 
     if optional_indices:
-        perm = ar.argsort(kind='mergesort' if return_index else 'quicksort')
-        aux = ar[perm]
+        pass
+        # perm = ar.argsort(kind='mergesort' if return_index else 'quicksort')
+        # aux = ar[perm]
     else:
-        ar.sort()
+        # ar.sort()
         aux = ar
     mask = np.empty(aux.shape, dtype=np.bool_)
     mask[:1] = True
