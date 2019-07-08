@@ -310,7 +310,7 @@ def _unique1d(ar, return_index=False, return_inverse=False,
     else:
         # ar.sort()
         aux = ar
-    mask = np.empty(aux.shape, dtype=np.bool_)
+    mask = np.empty(aux.shape, dtype=bool)
     mask[:1] = True
     mask[1:] = aux[1:] != aux[:-1]
 
